@@ -1,0 +1,12 @@
+事件监听器模式模式是一种广泛用于异步编程模式，是回调函数的事件化，又称发布订阅模式。
+Node 具有： addListener/on(), once(), removeListener(), removeAllListener() 和 emit() 等基本的事件监听模式 的方法实践。
+// 订阅
+	emitter.on('event1', function(message) {
+		console.log(message);
+	});
+
+// 发布
+	emitter.emit('event1', 'I am message!');
+
+事件的发布订阅模式常常用来解耦业务逻辑，事件发布者无须关注订阅的侦听器如何实现业务逻辑，甚至不用关注有多少侦听器存在，数据通过消息的方式可以和灵巧的传递。
+
